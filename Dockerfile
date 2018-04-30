@@ -8,6 +8,7 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 
 WORKDIR /
 
+# Azure Stack need profile version 2017-03-09-profile.
 RUN Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force ; \
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted ; \
 Install-Module -Name AzureRm.BootStrapper ; \
